@@ -12,7 +12,7 @@
 - 오실로스코프를 사용하여 생성된 PWM 신호의 시각적 비교
 
 ## UI
-### []
+### [Operation]
 
 ![Week2](https://github.com/user-attachments/assets/1bda0d3e-10f8-4706-9f25-ae2cbfafee9e)
 
