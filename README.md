@@ -21,7 +21,7 @@
 <img width="500" alt="2" src= "https://github.com/user-attachments/assets/111de6fc-041e-4f76-a774-c4f0567e6576">
 
 ## HardWare Setting
-<img width="500" alt="2" src= "https://github.com/user-attachments/assets/1a160ba0-8296-4879-b0b0-7dd76b732fe6">
+<img width="500" alt="2" src= "https://github.com/user-attachments/assets/98a5c959-a6fc-447d-8ec9-638267ac94f8">
 
 <img width="500" alt="2" src= "https://github.com/user-attachments/assets/ec5136ba-c9e1-4e02-afd9-3699ffb34f77">
 
