@@ -14,16 +14,16 @@
 ## UI
 ### [Operation]
 
-![Week2](https://github.com/user-attachments/assets/1bda0d3e-10f8-4706-9f25-ae2cbfafee9e)
+<img width="500" alt="2" src= "https://github.com/user-attachments/assets/1bda0d3e-10f8-4706-9f25-ae2cbfafee9e">
 
 ### [Coverage error handling]
 
-![Week2_error](https://github.com/user-attachments/assets/111de6fc-041e-4f76-a774-c4f0567e6576)
+<img width="500" alt="2" src= "https://github.com/user-attachments/assets/111de6fc-041e-4f76-a774-c4f0567e6576">
 
 ## HardWare Setting
-![image](https://github.com/user-attachments/assets/1a160ba0-8296-4879-b0b0-7dd76b732fe6)
+<img width="500" alt="2" src= "https://github.com/user-attachments/assets/1a160ba0-8296-4879-b0b0-7dd76b732fe6">
 
-![image](https://github.com/user-attachments/assets/ec5136ba-c9e1-4e02-afd9-3699ffb34f77)
+<img width="500" alt="2" src= "https://github.com/user-attachments/assets/ec5136ba-c9e1-4e02-afd9-3699ffb34f77">
 
 ## 설치 방법
 1. 이 저장소를 클론합니다:
