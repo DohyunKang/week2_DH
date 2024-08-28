@@ -266,7 +266,20 @@ namespace WindowsApplication1
             pwmDutyCycle = tempDutyCycle;
             highVoltage = tempHighVoltage;
             lowVoltage = tempLowVoltage;
+            
+            // 주기와 듀티 사이클 유효성 검사
+            if (pwmPeriod < 100 || pwmPeriod > 2000)
+            {
+                MessageBox.Show("주기 설정 범위를 넘어갔습니다. (100ms ~ 2s 사이의 값이어야 합니다)", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit(); // 애플리케이션 종료
+            }
 
+            if (pwmDutyCycle < 10 || pwmDutyCycle > 90)
+            {
+                MessageBox.Show("듀티 사이클 설정 범위를 넘어갔습니다. (10% ~ 90% 사이의 값이어야 합니다)", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit(); // 애플리케이션 종료
+            }
+            
             if (switch1.Value)
             {
                 // 설정된 값을 라벨에 표시
