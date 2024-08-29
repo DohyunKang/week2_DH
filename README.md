@@ -25,9 +25,13 @@
 #### Duty와 Period, Voltage가 바뀌면 그래프의 x,y축과 펄스의 모양이 그에 맞게 생성
 #### 1.
 <img width="500" alt="2" src= "https://github.com/user-attachments/assets/1f15aeed-7c77-4165-abe5-cbe5a6096ba1">
+
 #### 2.
+
 <img width="500" alt="2" src= "https://github.com/user-attachments/assets/00bb9638-33f5-4852-a290-7b75f1c7ff3e">
+
 #### 3.
+
 <img width="500" alt="2" src= "https://github.com/user-attachments/assets/4bba27c8-6955-4394-8e55-5fe4668627fa">
 
 ## HardWare Setting
