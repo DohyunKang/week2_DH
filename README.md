@@ -16,6 +16,13 @@
 
 <img width="500" alt="2" src= "https://github.com/user-attachments/assets/1bda0d3e-10f8-4706-9f25-ae2cbfafee9e">
 
+## [Capture 그래프 기능 추가 수정]
+### 한 주기의 한 펄스만 캡쳐함.
+#### Duty와 Period, Voltage가 바뀌면 그래프의 x,y축과 펄스의 모양이 그에 맞게 생성
+<img width="500" alt="2" src= "https://github.com/user-attachments/assets/1f15aeed-7c77-4165-abe5-cbe5a6096ba1">
+<img width="500" alt="2" src= "https://github.com/user-attachments/assets/00bb9638-33f5-4852-a290-7b75f1c7ff3e">
+<img width="500" alt="2" src= "https://github.com/user-attachments/assets/4bba27c8-6955-4394-8e55-5fe4668627fa">
+
 ### [Coverage error handling]
 
 <img width="500" alt="2" src= "https://github.com/user-attachments/assets/111de6fc-041e-4f76-a774-c4f0567e6576">
