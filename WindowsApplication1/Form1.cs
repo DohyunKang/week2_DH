@@ -1,4 +1,4 @@
-﻿using NationalInstruments.Analysis;
+using NationalInstruments.Analysis;
 using NationalInstruments.Analysis.Conversion;
 using NationalInstruments.Analysis.Dsp;
 using NationalInstruments.Analysis.Dsp.Filters;
@@ -233,7 +233,52 @@ namespace WindowsApplication1
             tempLowVoltage = e.NewValue;
         }
 
-        private void CaptureCurrentWaveform()
+        private void ShowSinglePulseInCaptureWfg()
+        {
+            try
+            {
+                // PWM 주기와 듀티 사이클에 따른 신호 생성
+                double pwmOn = pwmPeriod * (pwmDutyCycle / 100.0); // 듀티 사이클에 따른 ON 시간 계산
+                double pwmOff = pwmPeriod - pwmOn; // OFF 시간은 주기에서 ON 시간을 뺀 값
+
+                // X축 데이터 설정 (0부터 주기 끝까지)
+                List<double> yData = new List<double>();
+
+                // Ton(High) 구간 설정
+                for (double t = 0; t < pwmOn; t += 1) // 1ms 단위로 샘플링
+                {
+                    yData.Add(highVoltage);
+                }
+
+                // Toff(Low) 구간 설정
+                for (double t = pwmOn; t < pwmPeriod; t += 1)
+                {
+                    yData.Add(lowVoltage);
+                }
+
+                // CaptureWfg에 Y 데이터를 플롯 (기본 X축은 샘플 인덱스로 자동 설정됨)
+                CaptureWfg.PlotY(yData.ToArray());
+
+                // X축 범위를 현재 주기에 맞게 설정
+                CaptureWfg.XAxes[0].Range = new Range(0, pwmPeriod);
+
+                // 메시지 박스 표시 (캡처 완료)
+                MessageBox.Show("현재 주기의 한 펄스가 캡처되었습니다.", "캡처 완료", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                // 예외 처리
+                MessageBox.Show("파형 캡처 중 오류가 발생했습니다: " + ex.Message, "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        private void CaptureButton_Click(object sender, EventArgs e)
+        {
+            ShowSinglePulseInCaptureWfg();
+        }
+
+        /*private void CaptureCurrentWaveform()
         {
             try
             {
@@ -251,13 +296,7 @@ namespace WindowsApplication1
                 // 예외 처리
                 MessageBox.Show("파형 캡처 중 오류가 발생했습니다: " + ex.Message, "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void CaptureButton_Click(object sender, EventArgs e)
-        {
-            // ContinuousWfg의 데이터를 CaptureWfg에 복사
-            CaptureCurrentWaveform();
-        }
+        }*/
 
         private void ApplyButton_Click(object sender, EventArgs e)
         {
@@ -266,7 +305,7 @@ namespace WindowsApplication1
             pwmDutyCycle = tempDutyCycle;
             highVoltage = tempHighVoltage;
             lowVoltage = tempLowVoltage;
-            
+
             // 주기와 듀티 사이클 유효성 검사
             if (pwmPeriod < 100 || pwmPeriod > 2000)
             {
@@ -279,7 +318,7 @@ namespace WindowsApplication1
                 MessageBox.Show("듀티 사이클 설정 범위를 넘어갔습니다. (10% ~ 90% 사이의 값이어야 합니다)", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit(); // 애플리케이션 종료
             }
-            
+
             if (switch1.Value)
             {
                 // 설정된 값을 라벨에 표시
