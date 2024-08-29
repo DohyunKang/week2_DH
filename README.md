@@ -26,11 +26,11 @@
 #### 1.
 <img width="500" alt="2" src= "https://github.com/user-attachments/assets/1f15aeed-7c77-4165-abe5-cbe5a6096ba1">
 
-#### 2.
+#### 2. low v : 0V, high v : 5V, duty : 50%, period : 500ms
 
 <img width="500" alt="2" src= "https://github.com/user-attachments/assets/00bb9638-33f5-4852-a290-7b75f1c7ff3e">
 
-#### 3.
+#### 3. low v : 2V, high v : 5V, duty : 30%, period : 500ms
 
 <img width="500" alt="2" src= "https://github.com/user-attachments/assets/4bba27c8-6955-4394-8e55-5fe4668627fa">
 
